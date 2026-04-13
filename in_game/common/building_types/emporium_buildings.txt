@@ -1,0 +1,301 @@
+# Emporium Mod - Buildings
+
+# Level 1
+emp_trade_hub = {
+    is_foreign = no
+
+    graphical_tags = { emp_trade_hub }
+    pop_type = burghers
+    max_levels = 1
+    employment_size = 2.5
+
+    category = trade_category
+
+    city = yes
+
+    build_time = 720
+    price = emp_trade_hub_price
+    expensive = yes
+
+    country_potential = {
+        # Rank: Count or above
+        country_rank_level >= 1
+        # Strict 1-per-country: no emporium of ANY level anywhere in the country
+        NOT = {
+            any_scope_state = {
+                any_scope_building = {
+                    OR = {
+                        is_building_type = emp_trade_hub
+                        is_building_type = emp_grand_hub
+                        is_building_type = emp_royal_hub
+                        is_building_type = emp_imperial_hub
+                    }
+                }
+            }
+        }
+    }
+
+    location_potential = {
+        is_capital = yes
+        is_market_center = yes
+        OR = {
+            is_coastal = yes
+            has_river = yes
+        }
+        # Also block building a second one in the same city slot
+        NOT = {
+            has_building = emp_trade_hub
+        }
+    }
+
+    modifier = {
+        local_market_attractiveness = 0.05
+        local_merchant_power = 25
+        local_merchant_capacity = 25
+        local_trades_per_burgher = 0.25
+    }
+
+    capital_country_modifier = {
+        trade_range_modifier = 0.25
+    }
+
+    market_center_modifier = {
+        local_market_attractiveness = 0.05
+        local_trade_center_power = 0.05
+    }
+
+    unique_production_methods = {
+        emp_trade_hub_maintenance = {
+            fine_cloth = 1.25
+            paper = 1.25
+            cloth = 1.25
+            beeswax = 0.5
+            jewelry = 1.25
+            category = building_maintenance
+        }
+    }
+    construction_demand = emporium_l1_construction
+
+    on_built = {
+        owner = {
+            trigger_event_silently = { id = emporium.1 days = 360 }
+        }
+    }
+}
+
+# Level 2
+emp_grand_hub = {
+    is_foreign = no
+
+    graphical_tags = { emp_grand_hub }
+    pop_type = burghers
+    max_levels = 1
+    employment_size = 5.0
+
+    category = trade_category
+
+    city = yes
+
+    obsolete = emp_trade_hub
+
+    build_time = 720
+    price = emp_grand_hub_price
+    expensive = yes
+
+    country_potential = {
+        # Rank: Duke or above
+        country_rank_level >= 2
+        # Max 1 per country: only allowed if upgrading from level 1 (no other emporium type)
+        NOT = {
+            any_scope_state = {
+                any_scope_building = {
+                    OR = {
+                        is_building_type = emp_grand_hub
+                        is_building_type = emp_royal_hub
+                        is_building_type = emp_imperial_hub
+                    }
+                }
+            }
+        }
+    }
+
+    location_potential = {
+        is_capital = yes
+        is_market_center = yes
+        OR = {
+            is_coastal = yes
+            has_river = yes
+        }
+    }
+
+    modifier = {
+        local_market_attractiveness = 0.1
+        local_merchant_power = 50
+        local_merchant_capacity = 50
+        local_trades_per_burgher = 0.5
+    }
+
+    capital_country_modifier = {
+        trade_range_modifier = 0.5
+    }
+
+    market_center_modifier = {
+        local_market_attractiveness = 0.1
+        local_trade_center_power = 0.1
+    }
+
+    unique_production_methods = {
+        emp_grand_hub_maintenance = {
+            fine_cloth = 2.5
+            paper = 2.5
+            cloth = 2.5
+            beeswax = 1.0
+            jewelry = 2.5
+            category = building_maintenance
+        }
+    }
+    construction_demand = emporium_l2_construction
+}
+
+# Level 3
+emp_royal_hub = {
+    is_foreign = no
+
+    graphical_tags = { emp_royal_hub }
+    pop_type = burghers
+    max_levels = 1
+    employment_size = 7.5
+
+    category = trade_category
+
+    city = yes
+
+    obsolete = emp_grand_hub
+
+    build_time = 720
+    price = emp_royal_hub_price
+    expensive = yes
+
+    country_potential = {
+        # Rank: King or above
+        country_rank_level >= 3
+        # Max 1 per country
+        NOT = {
+            any_scope_state = {
+                any_scope_building = {
+                    OR = {
+                        is_building_type = emp_royal_hub
+                        is_building_type = emp_imperial_hub
+                    }
+                }
+            }
+        }
+    }
+
+    location_potential = {
+        is_capital = yes
+        is_market_center = yes
+        OR = {
+            is_coastal = yes
+            has_river = yes
+        }
+    }
+
+    modifier = {
+        local_market_attractiveness = 0.15
+        local_merchant_power = 75
+        local_merchant_capacity = 75
+        local_trades_per_burgher = 0.75
+    }
+
+    capital_country_modifier = {
+        trade_range_modifier = 0.75
+    }
+
+    market_center_modifier = {
+        local_market_attractiveness = 0.15
+        local_trade_center_power = 0.15
+    }
+
+    unique_production_methods = {
+        emp_royal_hub_maintenance = {
+            fine_cloth = 3.75
+            paper = 3.75
+            cloth = 3.75
+            beeswax = 1.5
+            jewelry = 3.75
+            category = building_maintenance
+        }
+    }
+    construction_demand = emporium_l3_construction
+}
+
+# Level 4
+emp_imperial_hub = {
+    is_foreign = no
+
+    graphical_tags = { emp_imperial_hub }
+    pop_type = burghers
+    max_levels = 1
+    employment_size = 10.0
+
+    category = trade_category
+
+    city = yes
+
+    obsolete = emp_royal_hub
+
+    build_time = 720
+    price = emp_imperial_hub_price
+    expensive = yes
+
+    country_potential = {
+        # Rank: Emperor or above
+        country_rank_level >= 4
+        # Max 1 per country
+        NOT = {
+            any_scope_state = {
+                any_scope_building = {
+                    is_building_type = emp_imperial_hub
+                }
+            }
+        }
+    }
+
+    location_potential = {
+        is_capital = yes
+        is_market_center = yes
+        OR = {
+            is_coastal = yes
+            has_river = yes
+        }
+    }
+
+    modifier = {
+        local_market_attractiveness = 0.2
+        local_merchant_power = 100
+        local_merchant_capacity = 100
+        local_trades_per_burgher = 1.0
+    }
+
+    capital_country_modifier = {
+        trade_range_modifier = 1.0
+    }
+
+    market_center_modifier = {
+        local_market_attractiveness = 0.2
+        local_trade_center_power = 0.2
+    }
+
+    unique_production_methods = {
+        emp_imperial_hub_maintenance = {
+            fine_cloth = 5.0
+            paper = 5.0
+            cloth = 5.0
+            beeswax = 2.0
+            jewelry = 5.0
+            category = building_maintenance
+        }
+    }
+    construction_demand = emporium_l4_construction
+}

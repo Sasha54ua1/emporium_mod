@@ -1,0 +1,89 @@
+﻿l_english:
+  STATIC_MODIFIER_NAME_emporium_reinvestment: "Reinvestment in the Emporium"
+  STATIC_MODIFIER_DESC_emporium_reinvestment: "The Emporium reinvestment is boosting trade."
+  STATIC_MODIFIER_NAME_emporium_assimilation: "Assimilation of the Local Population"
+  STATIC_MODIFIER_DESC_emporium_assimilation: "The Emporium accelerates the assimilation of population groups."
+ # Building type display names (shown in advance unlock tooltip)
+ emp_trade_hub: "Emporium"
+ emp_grand_hub: "Grand Emporium"
+ emp_royal_hub: "Royal Emporium"
+ emp_imperial_hub: "Imperial Emporium"
+ # Production methods
+ emp_trade_hub_maintenance: "Emporium"
+ emp_grand_hub_maintenance: "Grand Emporium"
+ emp_royal_hub_maintenance: "Royal Emporium"
+ emp_imperial_hub_maintenance: "Imperial Emporium"
+  # ========================
+  # BUILDINGS
+  # ========================
+  building_emporium: "Emporium"
+  building_emporium_desc: "Emporium — the heart of the state's trade and a magnificent commercial structure built on the waterfront, transforming the capital's market center into a true hub of regional commerce."
+
+  building_grand_emporium: "Grand Emporium"
+  building_grand_emporium_desc: "Grand Emporium — the heart of the state's trade and a magnificent commercial structure built on the waterfront, transforming the capital's market center into a true hub of regional commerce."
+
+  building_royal_emporium: "Royal Emporium"
+  building_royal_emporium_desc: "Royal Emporium — the heart of the state's trade and a magnificent commercial structure built on the waterfront, transforming the capital's market center into a true hub of regional commerce."
+
+  building_imperial_emporium: "Imperial Emporium"
+  building_imperial_emporium_desc: "Imperial Emporium — the heart of the state's trade and a magnificent commercial structure built on the waterfront, transforming the capital's market center into a true hub of regional commerce."
+
+  # ========================
+  # PRODUCTION METHODS
+  # ========================
+  pm_emporium: "Emporium"
+  pm_emporium_desc: "1.25 Silk · 1.25 Paper · 1.25 Textiles · 0.5 Beeswax · 1.25 Jewelry"
+
+  pm_grand_emporium: "Grand Emporium"
+  pm_grand_emporium_desc: "2.5 Silk · 2.5 Paper · 2.5 Textiles · 1.0 Beeswax · 2.5 Jewelry"
+
+  pm_royal_emporium: "Royal Emporium"
+  pm_royal_emporium_desc: "3.75 Silk · 3.75 Paper · 3.75 Textiles · 1.5 Beeswax · 3.75 Jewelry"
+
+  pm_imperial_emporium: "Imperial Emporium"
+  pm_imperial_emporium_desc: "5.0 Silk · 5.0 Paper · 5.0 Textiles · 2.0 Beeswax · 5.0 Jewelry"
+
+  # ========================
+  # ADVANCES
+  # ========================
+  emporium_legalism: "Emporium"
+  emporium_legalism_desc: "Unlocks the Emporium — a grand trade building for your capital's market center on the waterfront."
+
+  grand_emporium_banking: "Grand Emporium"
+  grand_emporium_banking_desc: "Unlocks the Grand Emporium — an expanded trade complex that doubles the commercial power of your capital."
+
+  royal_emporium_merchants: "Royal Emporium"
+  royal_emporium_merchants_desc: "Unlocks the Royal Emporium — a prestigious trade institution that dominates the commerce of the entire region."
+
+  imperial_emporium_port: "Imperial Emporium"
+  imperial_emporium_port_desc: "Unlocks the Imperial Emporium — the pinnacle of trade architecture, projecting your empire's commercial might across the known world."
+
+  # ========================
+  # EVENTS
+  # ========================
+  emporium.1.name: "The Emporium Flourishes"
+  emporium.1.desc: "Twelve months have passed since the completion of construction. The Emporium has opened its doors, and merchants from across the region flock to the capital."
+
+  emporium.1.a: "Trade Flourishes"
+  emporium.1.a.tt: "The Emporium's opening brings immediate profit. +500 Gold."
+
+  emporium.1.b: "Reinvest in the Market"
+  emporium.1.b.tt: "Pour resources back into the market to attract even more merchants. +25% Trade Potential for 6 months, +1000 population."
+
+  emporium.2.name: "Shadow over the Market"
+  emporium.2.desc: "The prosperity of the  market has attracted swindlers and fraudsters. Citizens have been deceived and robbed, and the reputation of the market is at risk."
+
+  emporium.2.a: "Conduct Purges"
+  emporium.2.a.tt: "Root out the criminals by force. -300 population, -7 Stability. Closes the event chain."
+
+  emporium.2.b: "Compensate the Losses"
+  emporium.2.b.tt: "Pay to silence the scandal and keep the market running. -150 Gold. The problem will return in 12 months."
+
+  # ========================
+  # MODIFIERS
+  # ========================
+  emporium_reinvestment: "Reinvestment in the Emporium"
+  emporium_reinvestment_desc: "The Emporium reinvestment is boosting trade potential."
+
+  emporium_population_boost: "Assimilation of the Local Population"
+  emporium_population_boost_desc: "The Emporium's opening is attracting new citizens to the capital."

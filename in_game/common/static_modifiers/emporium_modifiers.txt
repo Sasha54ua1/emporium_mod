@@ -1,0 +1,8 @@
+﻿emporium_reinvestment = {
+	global_merchant_power = 0.25
+	global_merchant_capacity_modifier = 0.25
+}
+
+emporium_assimilation = {
+	global_pop_assimilation_speed_modifier = 0.25
+}

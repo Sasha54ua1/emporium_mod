@@ -1,0 +1,11 @@
+﻿{
+	"name": "Emporium",
+	"id": "",
+	"version": "1.0",
+	"supported_game_version": "",
+	"short_description": "Adds a chain of four trade buildings unlocked across four Ages and Institutions.",
+	"tags": [],
+	"thumbnail": "thumbnail.png",
+	"relationships": [],
+	"game_custom_data": {}
+}

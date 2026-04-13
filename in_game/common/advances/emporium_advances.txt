@@ -1,0 +1,31 @@
+﻿emporium_legalism = {
+	age = age_1_traditions
+
+	requires = scriptorium_advance
+
+	unlock_building = emp_trade_hub
+}
+
+grand_emporium_banking = {
+	age = age_2_renaissance
+
+	requires = banking_advance
+
+	unlock_building = emp_grand_hub
+}
+
+royal_emporium_merchants = {
+	age = age_3_discovery
+
+	requires = printing_press_advance
+
+	unlock_building = emp_royal_hub
+}
+
+imperial_emporium_port = {
+	age = age_4_reformation
+
+	requires = merchant_power_from_maritime_reformation_advance
+
+	unlock_building = emp_imperial_hub
+}

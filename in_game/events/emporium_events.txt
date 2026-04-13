@@ -1,0 +1,67 @@
+﻿namespace = emporium
+
+emporium.1 = {
+	type = country_event
+	title = emporium.1.name
+	desc = emporium.1.desc
+
+	image = "gfx/event_pictures/emporium.dds"
+
+	orphan = yes
+
+	immediate = {
+		capital = { save_scope_as = emporium_capital }
+	}
+
+	option = {
+		name = emporium.1.a
+		add_gold = 500
+		trigger_event_silently = { id = emporium.2 days = 360 }
+	}
+
+	option = {
+		name = emporium.1.b
+		add_country_modifier = { modifier = emporium_reinvestment years = 2 mode = add_and_extend }
+		add_country_modifier = { modifier = emporium_assimilation years = 5 mode = add_and_extend }
+		capital ?= {
+			random_pop = {
+				limit = { pop_type = pop_type:burghers }
+				add_pop_size = { value = 1 }
+			}
+		}
+		trigger_event_silently = { id = emporium.2 days = 360 }
+	}
+}
+
+emporium.2 = {
+	type = country_event
+	title = emporium.2.name
+	desc = emporium.2.desc
+
+	image = "gfx/event_pictures/emporium.dds"
+
+	orphan = yes
+
+	immediate = {
+		capital = { save_scope_as = emporium_capital }
+	}
+
+	option = {
+		name = emporium.2.a
+		add_stability = -7
+		capital ?= {
+			every_pop = {
+				add_pop_size = {
+					value = pop_size
+					multiply = -0.03
+				}
+			}
+		}
+	}
+
+	option = {
+		name = emporium.2.b
+		add_gold = -150
+		trigger_event_silently = { id = emporium.2 days = 360 }
+	}
+}

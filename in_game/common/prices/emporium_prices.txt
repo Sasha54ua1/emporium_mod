@@ -1,0 +1,15 @@
+﻿emp_trade_hub_price = {
+	gold = 1250
+}
+
+emp_grand_hub_price = {
+	gold = 2500
+}
+
+emp_royal_hub_price = {
+	gold = 3750
+}
+
+emp_imperial_hub_price = {
+	gold = 5000
+}
